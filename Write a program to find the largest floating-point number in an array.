@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    
+    // Read number of elements
+    scanf("%d", &n);
+    
+    float arr[n];
+    
+    // Read float elements
+    for(int i = 0; i < n; i++)
+    {
+        scanf("%f", &arr[i]);
+    }
+    
+    // Assume first element is largest
+    float max = arr[0];
+    
+    // Find largest element
+    for(int i = 1; i < n; i++)
+    {
+        if(arr[i] > max)
+        {
+            max = arr[i];
+        }
+    }
+    
+    // Print result with 2 decimal precision
+    printf("%.2f", max);
+    
+    return 0;
+}
