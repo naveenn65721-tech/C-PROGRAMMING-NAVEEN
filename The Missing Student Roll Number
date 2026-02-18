@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    int sum = 0, num;
+    
+    // Calculate expected sum of numbers from 1 to N
+    int total = N * (N + 1) / 2;
+
+    // Read N-1 numbers and calculate their sum
+    for(int i = 0; i < N - 1; i++) {
+        scanf("%d", &num);
+        sum += num;
+    }
+
+    // Missing number
+    printf("%d\n", total - sum);
+
+    return 0;
+}
