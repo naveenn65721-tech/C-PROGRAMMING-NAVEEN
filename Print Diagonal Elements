@@ -1,0 +1,25 @@
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    
+    // Read the size of the matrix
+    scanf("%d", &n);
+    
+    int matrix[n][n];
+    
+    // Read matrix elements
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    
+    // Print primary diagonal elements
+    for(int i = 0; i < n; i++) {
+        printf("%d ", matrix[i][i]);
+    }
+    
+    return 0;
+}
